@@ -83,6 +83,7 @@ nav ul li a:hover::after{
 
 .header-text p, .dev{
     font-family: 'Edu TAS Beginner', cursive;
+    color: aqua;
 }
 
 .header-text h1{

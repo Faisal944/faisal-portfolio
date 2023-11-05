@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2b5b28882d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div class="gradient-background">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>H</span>ola!</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li class="last"><a href="#contact">Contact</a></li>
+                <i class="fa-regular fa-circle-xmark fass" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars fass" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1 class="hidden">Hi, I'm <span>Mohammed</span> <br> Faisal from India</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- ------about---- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p><span>Hello,</span> I'm Mohammed Faisal, an Electronics and Communication graduate with a passion for IT. Python is my trusty companion, it's not just simple, but incredibly fun. Join me on this coding adventure through the digital cosmos!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certification')">Certification</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span><br>OOP, APIs, Flask</li>
+                            <li><span>Web Development</span><br>HTML CSS JavaScript</li>
+                            <li><span>Java</span><br>Object Oriented Programming</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.E</span><br>Sri Siddhartha Institue of Technology, Tumkur<br>2019-2023</li>
+                            <li><span>School </span><br>SGR High Schol</li>
+                        
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certification">
+                        <ul>
+                            <li><span>Python Programming</span><br>100 days of coding<br>Issued by: Udemy</li>
+                            <li><span>Web Development</span><br>Complete Web Development Bootcamp<br>Issued by: Udemy</li>
+                            <li><span>Java Programming</span><br>Issued by: Udemy</li>
+                        </ul>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- skills -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Key Skills</h1>
+            <div class="services-list">
+                <div class="hidden">
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python Programming</h2>
+                    <p>"Mastering Python to turn code into creativity"</p>
+                    <a href="https://www.w3schools.com/python/python_intro.asp">Learn more</a>
+                </div>
+                <div class="hidden">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>
+                        "Crafting digital experiences through the art of web development"</p>
+                    <a href="https://www.w3schools.com/whatis/">Learn more</a>
+                </div>
+                <div class="hidden">
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Java Programming</h2>
+                    <p>"Elevating applications with the power of Java"</p>
+                    <a href="https://www.geeksforgeeks.org/java/">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work hidden1">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Text Summarization Website</h3>
+                        <p>"A website that can condense lengthy articles and documents into concise, easy-to-read summaries, saving you time and providing you with the most important information at a glance. It's like a magic wand for readers!"</p>
+                        <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
+                    </div>
+                </div>
+                <div class="work hidden1">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Web Application</h3>
+                        <p>"An automated birthday email service, the perfect way to send heartfelt wishes to your loved ones. It's like a secret agent for special occasions, straight to their inbox, no cape required!"</p>
+                        <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
+                    </div>
+                </div>
+                <div class="work hidden1">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>weather notification service</h3>
+                        <p>"A service that ensures you never leave your home unprepared, with a friendly nudge when it's time to grab your umbrella. Because hey, who wants to be caught off guard with the rain!"</p>
+                        <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> faisal944k@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+916360788936</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_faisall.k/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/mohammed-faisal-373292246?trk=contact-info"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="faisalsResume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2 edit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-solid fa-copyright"></i> Mohammed Faisal 2023. All Rights Reserved. <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+
+</html>

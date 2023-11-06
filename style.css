@@ -268,7 +268,7 @@ nav ul li a:hover::after{
 
 .name h1{
     position: relative;
-    font-size: 60px;
+    font-size: 55px;
     color: aqua;
     z-index: 2;
     padding: 10px;

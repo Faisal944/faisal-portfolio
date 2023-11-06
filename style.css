@@ -551,6 +551,20 @@ nav .fass{
         left: 25px;
         cursor: pointer;
      }
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .container1 {
+        position: relative;
+        width: 100%;
+        transform: rotate(-40deg);
+    }
+    
+    .box {
+        position: relative;
+        left: -100px; 
+        width: calc(100% + 200px);
+    }  
     .name h1{
         font-size: 30px;
      }

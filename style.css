@@ -749,6 +749,8 @@ nav .fass{
      .name h1{
         font-size: 30px;
         margin-top: 10px;
+        font-weight: 600;
+        font-family: 'poppins', cursive;
      }
      .sub-title{
         font-size: 40px;

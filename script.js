@@ -52,3 +52,32 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden, .hidden1');
 hiddenElements.forEach((el) => observer.observe(el));
+
+// text animation
+const letters = "abcdefghijklmnopqrstuvwxyz";
+
+function applyHackerEffect(element) {
+    element.onmouseover = event => {
+        let iteration = 0;
+        const interval = setInterval(() => {
+            element.querySelector(".hacker").innerText = element.querySelector(".hacker").dataset.value.split("")
+                .map((letter, index) => {
+                    if (index < iteration) {
+                        return element.querySelector(".hacker").dataset.value[index];
+                    }
+                    return letters[Math.floor(Math.random() * 26)];
+                })
+                .join("");
+
+            if (iteration >= element.querySelector(".hacker").dataset.value.length) {
+                clearInterval(interval);
+            }
+
+            iteration += 1 / 3;
+        }, 3);
+    };
+}
+
+if (window.matchMedia("(min-width: 1024px)").matches) {
+    document.querySelectorAll(".hidden").forEach(applyHackerEffect);
+}

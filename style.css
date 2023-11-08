@@ -295,9 +295,8 @@ nav ul li a:hover::after{
     padding: 40PX;
     font-family: 13px;
     font-weight: 300;
-    border-radius: 50%;
-    transition: background 0.5s, transform 0.5s;
-    text-align: center;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
 }
 
 .services-list div i{

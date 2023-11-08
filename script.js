@@ -57,25 +57,32 @@ hiddenElements.forEach((el) => observer.observe(el));
 const letters = "abcdefghijklmnopqrstuvwxyz";
 
 function applyHackerEffect(element) {
-    element.onmouseover = event => {
-        let iteration = 0;
-        const interval = setInterval(() => {
-            element.querySelector(".hacker").innerText = element.querySelector(".hacker").dataset.value.split("")
-                .map((letter, index) => {
-                    if (index < iteration) {
-                        return element.querySelector(".hacker").dataset.value[index];
-                    }
-                    return letters[Math.floor(Math.random() * 26)];
-                })
-                .join("");
+    let isAnimationInProgress = false; 
 
-            if (iteration >= element.querySelector(".hacker").dataset.value.length) {
-                clearInterval(interval);
-            }
+    element.addEventListener("mouseenter", event => {
+        if (!isAnimationInProgress) {
+            isAnimationInProgress = true; 
 
-            iteration += 1 / 3;
-        }, 3);
-    };
+            let iteration = 0;
+            const interval = setInterval(() => {
+                element.querySelector(".hacker").innerText = element.querySelector(".hacker").dataset.value.split("")
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return element.querySelector(".hacker").dataset.value[index];
+                        }
+                        return letters[Math.floor(Math.random() * 26)];
+                    })
+                    .join("");
+
+                if (iteration >= element.querySelector(".hacker").dataset.value.length) {
+                    clearInterval(interval);
+                    isAnimationInProgress = false;
+                }
+
+                iteration += 1 / 3;
+            }, 3);
+        }
+    });
 }
 
 if (window.matchMedia("(min-width: 1024px)").matches) {

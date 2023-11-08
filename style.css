@@ -296,7 +296,8 @@ nav ul li a:hover::after{
     font-family: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 0.5s;
+
 }
 
 .services-list div i{
@@ -326,6 +327,11 @@ nav ul li a:hover::after{
 .services-list div:hover{
     background:rgb(16, 16, 160);
     transform: translateY(-10px);
+}
+
+.hacker {
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /* animation2 */
